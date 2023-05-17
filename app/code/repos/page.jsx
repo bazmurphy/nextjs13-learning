@@ -5,7 +5,12 @@ import { FaStar, FaCodeBranch, FaEye } from "react-icons/fa";
 
 async function fetchRepos() {
   const response = await fetch(
-    "https://api.github.com/users/bazmurphy/repos?sort=updated&per_page=20"
+    "https://api.github.com/users/bazmurphy/repos?sort=updated&per_page=20",
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
   );
   // enforce a wait of 0.5 seconds to test "loading.jsx"
   await new Promise((resolve) => setTimeout(resolve, 500));
