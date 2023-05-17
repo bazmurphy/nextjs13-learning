@@ -8,12 +8,7 @@ const AboutPage = () => {
   return (
     <div className="about-page-container">
       <h1 className="page-title">About Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolorem
-        labore quod atque debitis similique at obcaecati modi provident eaque
-        aliquid architecto rerum natus facere voluptate, dignissimos tempore
-        omnis qui.
-      </p>
+      <p>This is to test nested routes, this is the first level.</p>
     </div>
   );
 };

@@ -8,12 +8,7 @@ const BazPage = () => {
   return (
     <div className="baz-page-container">
       <h1 className="page-title">Baz Page</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quo a aut
-        quia, repellendus optio atque est neque exercitationem quae obcaecati.
-        Temporibus, illum? Voluptatibus dicta, id iusto officia exercitationem
-        sapiente.
-      </p>
+      <p>This is to test nested routes, this is the third level.</p>
     </div>
   );
 };

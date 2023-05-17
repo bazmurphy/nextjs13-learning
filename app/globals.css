@@ -46,12 +46,18 @@ a:focus {
   background: linear-gradient(hsl(273, 60%, 22%) 25%, hsl(273, 60%, 12%));
 }
 
-.header-logo-container {
+.header-logo-link {
+  display: flex;
+  flex-direction: column;
 }
 
-.header-logo {
+.header-logo-title {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
+}
+
+.header-logo-image {
+  max-height: 20px;
 }
 
 .header-nav-container > ul {
@@ -111,6 +117,10 @@ a:focus {
   border: 1px solid hsl(0, 0%, 20%);
 }
 
+.team-member-link:hover {
+  background-color: hsl(273, 60%, 28%);
+}
+
 .repo-page-container {
   display: flex;
   flex-direction: column;
@@ -152,7 +162,6 @@ a:focus {
 
 .repo-card-details {
   display: flex;
-  /* justify-content: space-between; */
   gap: 40px;
 }
 
@@ -176,6 +185,31 @@ a:focus {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.emojis-search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emoji-search-form {
+}
+
+.emoji-search-input {
+  padding: 2px 4px;
+}
+
+.emoji-search-button {
+  padding: 4px 12px;
+  cursor: pointer;
+  border: 0;
+  background-color: hsl(273, 60%, 22%);
+  color: hsl(0, 0%, 85%);
+}
+
+.emoji-search-button:hover {
+  background-color: hsl(273, 60%, 28%);
 }
 
 .emojis-api-container {

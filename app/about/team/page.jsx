@@ -8,12 +8,7 @@ const TeamPage = () => {
   return (
     <div className="team-page-container">
       <h1 className="page-title">Team Page</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-        voluptate non, excepturi fugiat vel officia sit repudiandae fuga?
-        Adipisci deleniti, unde consectetur placeat ut reprehenderit incidunt
-        quaerat soluta tempore. Tenetur!
-      </p>
+      <p>This is to test nested routes, this is the second level.</p>
       <h2 className="page-subtitle">Team Members</h2>
       <ul className="team-members-list">
         <li>

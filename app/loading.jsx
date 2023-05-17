@@ -13,11 +13,7 @@
 import React from "react";
 
 const LoadingPage = () => {
-  return (
-    <div className="loading-container">
-      <p className="loading-message">Loading...</p>
-    </div>
-  );
+  return <div className="loading-message">Loading...</div>;
 };
 
 export default LoadingPage;

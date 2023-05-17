@@ -28,6 +28,10 @@ const ReposPage = async () => {
   return (
     <div className="repos-page-container">
       <h1 className="page-title">Repositories Page</h1>
+      <p>
+        This is to test Server Side Components, working with Suspense Boundaries
+        and Revalidating, whilst working with External APIs...
+      </p>
       <ul className="repos-list">
         {repos.map((repo) => {
           return (
