@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className="header-container">
       <Link href="/" className="header-logo-link">
-        <img src="images/next.svg" alt="" className="header-logo-image" />
+        <img src="/images/next.svg" alt="" className="header-logo-image" />
         <h2 className="header-logo-title">Baz Next.js 13 Learning</h2>
       </Link>
       <nav className="header-nav-container">
