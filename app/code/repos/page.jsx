@@ -4,11 +4,11 @@ import Link from "next/link";
 import { FaStar, FaCodeBranch, FaEye } from "react-icons/fa";
 
 async function fetchRepos() {
-  const response = await fetch("https://api.github.com/users/bazmurphy/repos");
-
-  // enforce a wait of 1.5 seconds to test "loading.jsx"
-  await new Promise((resolve) => setTimeout(resolve, 1500));
-
+  const response = await fetch(
+    "https://api.github.com/users/bazmurphy/repos?sort=updated&per_page=20"
+  );
+  // enforce a wait of 0.5 seconds to test "loading.jsx"
+  await new Promise((resolve) => setTimeout(resolve, 500));
   const data = await response.json();
   return data;
 }
@@ -26,7 +26,7 @@ const ReposPage = async () => {
       <ul className="repos-list">
         {repos.map((repo) => {
           return (
-            <li key={repo.id} className="repo-card">
+            <li key={repo.id} className="repo-card-list-item">
               <Link
                 href={`/code/repos/${repo.name}`}
                 className="repo-card-link"
@@ -36,15 +36,18 @@ const ReposPage = async () => {
                   description: {repo.description}
                 </p>
                 <div className="repo-card-details">
-                  <span>
-                    <FaStar /> {repo.stargazers_count}
-                  </span>
-                  <span>
-                    <FaCodeBranch /> {repo.forks_count}
-                  </span>
-                  <span>
-                    <FaEye /> {repo.watchers_count}
-                  </span>
+                  <div className="repo-card-stat">
+                    <FaStar />
+                    <span>{repo.stargazers_count}</span>
+                  </div>
+                  <div className="repo-card-stat">
+                    <FaCodeBranch />
+                    <span>{repo.forks_count}</span>
+                  </div>
+                  <div className="repo-card-stat">
+                    <FaEye />
+                    <span>{repo.watchers_count}</span>
+                  </div>
                 </div>
               </Link>
             </li>

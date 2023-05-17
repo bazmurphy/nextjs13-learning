@@ -6,6 +6,19 @@
   padding: 0;
 }
 
+/* these html tags are to fix the scrollbar jumping */
+html {
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
+
 body {
   max-width: 800px;
   margin: 0 auto;
@@ -73,6 +86,8 @@ a:focus {
 
 .page-title {
   font-size: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid hsl(0, 0%, 30%);
 }
 
 .page-subtitle {
@@ -92,28 +107,67 @@ a:focus {
 
 .team-member-link {
   padding: 5px 10px;
-  background-color: hsl(273, 50%, 50%);
+  background-color: hsl(273, 60%, 22%);
   border: 1px solid hsl(0, 0%, 20%);
 }
 
-.repo-card {
+.repo-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #2f1248;
+  background-color: hsl(0, 0%, 100%, 0.1);
 }
 
-.repo-card-name {
+.repo-page-back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.repo-card-description {
+.repo-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.repo-dir-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
 
 .repo-card-link {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: linear-gradient(hsl(273, 5%, 22%) 25%, hsl(273, 5%, 12%));
   padding: 10px;
+  border: 1px solid #2f1248;
+  background-color: hsl(0, 0%, 100%, 0.1);
+  /* background: linear-gradient(hsl(273, 5%, 22%) 25%, hsl(273, 5%, 12%)); */
 }
 
 .repo-card-details {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 40px;
+}
+
+.repo-card-stat {
+  display: flex;
+  gap: 10px;
+}
+
+.repo-dirs-title {
+}
+
+.repo-dirs-list {
+  list-style: inside;
+}
+
+.repo-dirs-link {
+  text-decoration: underline;
 }

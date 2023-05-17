@@ -16,7 +16,7 @@ const Header = () => {
     <header className="header-container">
       <div className="header-logo-container">
         <Link href="/" className="header-logo">
-          Next.js 13 Learning
+          Baz Next.js 13 Learning
         </Link>
       </div>
       <nav className="header-nav-container">
