@@ -8,17 +8,17 @@ const EmojisPage = () => {
       <div className="emojis-api-container">
         <h3 className="page-subtitle">API Examples:</h3>
         <div className="emojis-api-links">
-          <Link href="http://localhost:3000/api/emojis" target="_blank">
+          <Link href={`${NEXT_PUBLIC_API_URL}/emojis`} target="_blank">
             /api/emojis
           </Link>
           <Link
-            href="http://localhost:3000/api/emojis/search?name=smiling"
+            href={`${NEXT_PUBLIC_API_URL}/emojis/search?name=smiling`}
             target="_blank"
           >
             /api/emojis/search?name=smiling
           </Link>
           <Link
-            href="http://localhost:3000/api/emojis/search?name=smiling&subGroup=affection"
+            href={`${NEXT_PUBLIC_API_URL}/emojis/search?name=smiling&subGroup=affection`}
             target="_blank"
           >
             /api/emojis/search?name=smiling&subGroup=affection

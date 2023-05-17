@@ -1,5 +1,5 @@
 async function fetchEmojis() {
-  const response = await fetch("http://localhost:3000/api/emojis");
+  const response = await fetch(`{NEXT_PUBLIC_API_URL}/emojis`);
   const data = await response.json();
   // console.log(data);
   return data;
