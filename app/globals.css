@@ -171,3 +171,46 @@ a:focus {
 .repo-dirs-link {
   text-decoration: underline;
 }
+
+.emojis-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emojis-api-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emojis-api-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.emojis-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emojis-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 10px;
+}
+
+.emoji-cell {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.emoji-character {
+  font-size: 24px;
+}
+
+.emoji-unicode-name {
+  font-size: 12px;
+}

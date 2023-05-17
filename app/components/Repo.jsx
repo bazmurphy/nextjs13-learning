@@ -17,16 +17,16 @@ async function fetchRepo(name) {
     }
   );
   const data = await response.json();
+  // console.log(data)
   return data;
 }
 
 // [1] we make the Repo component (it must be ASYNC to allow the fetch)
 const Repo = async ({ name }) => {
-  // await new Promise((resolve) => setTimeout(resolve, 1500));
   // [2] we fetch the repo data
   const repo = await fetchRepo(name);
   // in the ide console it is giving us the specific repository
-  console.log(repo);
+  // console.log(repo);
 
   return (
     <div className="repo-card-container">

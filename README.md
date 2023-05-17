@@ -59,3 +59,35 @@ const response = await fetch("url here", {
   }
 })
 ```
+
+## API Route Handlers
+
+Allow you to create custom request handlers for a given route
+Instead of having a backend Express API in many cases you can keep it within your folder structure
+This is where the `/app/api` folder comes into play
+Also you CAN have route handlers within your page routes, it doesn't have to be within the `/app/api` folder
+But if you put it in there the route will be prefixed with `/api`
+
+You make a subfolder in `/api` for example `/api/hello` and in there you create a `route.js` file and then you can write a function:
+
+```
+export async function GET(request) {
+  return new Response("Hello!");
+}
+```
+
+And when we visit `http://localhost:3000/hello/api`
+We get back a response of `200` with a `json` body of `"Hello!"`
+
+with past NextJS version you would call that function handler, but in NextJS13 you call the function WHATEVER METHOD we want in this case `GET`
+If you change it to `POST` the `GET` above will no longer work.
+
+```
+export async function GET(request) {
+  return new Response("Hello from /api/hello via GET");
+}
+
+export async function POST(request) {
+  return new Response("Hello from /api/hello via POST");
+}
+```

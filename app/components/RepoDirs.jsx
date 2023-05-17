@@ -20,12 +20,13 @@ async function fetchRepoContents(name) {
     }
   );
   const data = await response.json();
+  // console.log(data);
   return data;
 }
 
 const RepoDirs = async ({ name }) => {
   const contents = await fetchRepoContents(name);
-  console.log(contents);
+  // console.log(contents);
   const dirs = contents.filter((content) => content.type === "dir");
 
   return (

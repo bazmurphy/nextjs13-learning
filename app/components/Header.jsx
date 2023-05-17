@@ -30,6 +30,9 @@ const Header = () => {
           <li>
             <Link href="/code/repos">Code</Link>
           </li>
+          <li>
+            <Link href="/emojis">Emojis</Link>
+          </li>
         </ul>
       </nav>
     </header>
