@@ -9,7 +9,7 @@ import React from "react";
 const LoadingPage = () => {
   return (
     <div className="loading-container">
-      <div>Loading...</div>
+      <p>Loading...</p>
     </div>
   );
 };
