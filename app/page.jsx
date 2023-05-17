@@ -4,8 +4,8 @@ export const metadata = {
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className="home-page-container">
+      <h1 className="page-title">Home Page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, ea
         dolore blanditiis, culpa adipisci recusandae nostrum quasi harum natus,

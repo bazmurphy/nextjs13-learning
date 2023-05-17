@@ -1,9 +1,16 @@
 /* instead of importing the font in the css file we can use NextJS 13 to import the font inside any component (commonly seen in the layout.jsx)*/
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  max-width: 800px;
+  margin: 0 auto;
   background-color: hsl(0, 0%, 15%);
   color: hsl(0, 0%, 85%);
-  margin: 0;
 }
 
 a {
@@ -18,24 +25,90 @@ a:focus {
 }
 
 .header-container {
-  background-color: hsl(273, 60%, 22%);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(hsl(273, 60%, 22%) 25%, hsl(273, 60%, 12%));
 }
 
 .header-logo-container {
 }
 
 .header-logo {
+  font-weight: 600;
   font-size: 24px;
 }
 
 .header-nav-container > ul {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   list-style: none;
 }
 
 .header-nav-container > ul > li {
+  font-size: 18px;
+}
+
+.main-container {
+  padding: 20px;
+  background-color: hsl(0, 0%, 20%);
+  border: 1px solid hsl(0, 0%, 25%);
+}
+
+.home-page-container,
+.about-page-container,
+.team-page-container,
+.repos-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.page-title {
+  font-size: 28px;
+}
+
+.page-subtitle {
+  font-size: 22px;
+}
+
+.repos-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-members-list {
+  list-style: none;
+}
+
+.team-member-link {
+  padding: 5px 10px;
+  background-color: hsl(273, 50%, 50%);
+  border: 1px solid hsl(0, 0%, 20%);
+}
+
+.repo-card {
+}
+
+.repo-card-name {
+}
+
+.repo-card-description {
+}
+
+.repo-card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(hsl(273, 5%, 22%) 25%, hsl(273, 5%, 12%));
+  padding: 10px;
+}
+
+.repo-card-details {
+  display: flex;
+  justify-content: space-between;
 }

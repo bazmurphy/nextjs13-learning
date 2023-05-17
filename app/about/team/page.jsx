@@ -6,20 +6,22 @@ export const metadata = {
 
 const TeamPage = () => {
   return (
-    <div>
-      <h1>Team Page</h1>
-      <ul>
-        <h2>Team Members</h2>
+    <div class="team-page-container">
+      <h1 className="page-title">Team Page</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+        voluptate non, excepturi fugiat vel officia sit repudiandae fuga?
+        Adipisci deleniti, unde consectetur placeat ut reprehenderit incidunt
+        quaerat soluta tempore. Tenetur!
+      </p>
+      <h2 className="page-subtitle">Team Members</h2>
+      <ul className="team-members-list">
         <li>
-          <Link href="/about/team/baz">Baz</Link>
+          <Link href="/about/team/baz" className="team-member-link">
+            Baz
+          </Link>
         </li>
       </ul>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus,
-        quae optio. Minima sed exercitationem rerum veniam, quos dolor eaque at
-        voluptas eligendi dolorem sequi impedit. Expedita adipisci repellat
-        veritatis quos?
-      </p>
     </div>
   );
 };

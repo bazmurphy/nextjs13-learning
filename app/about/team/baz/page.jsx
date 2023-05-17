@@ -6,8 +6,8 @@ export const metadata = {
 
 const BazPage = () => {
   return (
-    <div>
-      <h1>Baz Page</h1>
+    <div className="baz-page-container">
+      <h1 className="page-title">Baz Page</h1>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui quo a aut
         quia, repellendus optio atque est neque exercitationem quae obcaecati.
