@@ -3,6 +3,9 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import { Open_Sans } from "next/font/google";
 
+// we import the header from Components and use it in this layout to display it on every page
+import Header from "./components/Header";
+
 // we create an instance of the font
 // which can we then reference in the body below using the .className property
 const poppins = Poppins({
@@ -28,6 +31,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={openSans.className}>
+        <Header />
         <main className="main-container">{children}</main>
       </body>
     </html>

@@ -3,8 +3,39 @@
 body {
   background-color: hsl(0, 0%, 15%);
   color: hsl(0, 0%, 85%);
+  margin: 0;
 }
 
 a {
+  text-decoration: none;
   color: hsl(0, 0%, 85%);
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  color: hsl(0, 0%, 95%);
+}
+
+.header-container {
+  background-color: hsl(273, 60%, 22%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo-container {
+}
+
+.header-logo {
+  font-size: 24px;
+}
+
+.header-nav-container > ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.header-nav-container > ul > li {
 }
