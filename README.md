@@ -91,3 +91,61 @@ export async function POST(request) {
   return new Response("Hello from /api/hello via POST");
 }
 ```
+
+### Extracting query parameters :
+
+If you want to get the query parameters that are passed into the URL such as:
+
+http://localhost:3000/api/emojis/search?name=smiling
+
+We use build a `new URL` with the `request.url`
+And then we extract the `searchParams` from it
+
+```
+const { searchParams } = new URL(request.url);
+
+console.log(request.url);
+// http://localhost:3000/api/emojis/search?name=smiling
+
+console.log(searchParams);
+// URLSearchParams { 'name' => 'smiling' }
+```
+
+We then need to use the `searchParams` `.get()` method to get the correct query parameter
+
+```
+console.log(searchParams.get("name"));
+// smiling
+```
+
+If you have multiple query parameters, such as:
+
+http://localhost:3000/api/emojis/search?name=smiling&subGroup=affection
+
+You can do:
+
+```
+console.log(searchParams)
+// URLSearchParams { 'name' => 'smiling', 'subGroup' => 'affection' }
+
+console.log(searchParams.get("name"))
+// smiling
+
+console.log(searchParams.get("subGroup"));
+// affection
+```
+
+So to put it all together:
+
+```
+// get the query parameter
+const unicodeName = searchParams.get("name");
+
+// filter the data with that query parameter
+const filteredEmojis = emojis.filter((emoji) => {
+  return emoji.unicodeName.toLowerCase().includes(unicodeName.toLowerCase());
+});
+
+// send the filtered data as a json response
+return NextResponse.json(filteredEmojis);
+```
